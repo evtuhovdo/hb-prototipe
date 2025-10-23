@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+    
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a href="all-offers.html">Все предложения</a>
+            <a href="login.html">Войти</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register">Заявка на регистрацию</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-grid">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <a href="#personal-info" class="active">
+                            <span>👤</span>
+                            Личная информация
+                        </a>
+                        <a href="#change-password">
+                            <span>🔒</span>
+                            Смена пароля
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="profile-content">
+                    <!-- Personal Information -->
+                    <div class="profile-section-content" id="personal-info">
+                        <div class="section-header">
+                            <h2 class="section-title">Личная информация</h2>
+                            <button class="btn-edit" onclick="toggleEditMode()">Редактировать</button>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-avatar-section">
+                                <div class="profile-avatar">
+                                    <span>ИИ</span>
+                                </div>
+                                <div class="avatar-actions">
+                                    <button class="btn-change-avatar">Изменить фото</button>
+                                    <button class="btn-remove-avatar">Удалить</button>
+                                </div>
+                            </div>
+
+                            <form class="profile-form" id="profileForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Имя</label>
+                                        <input type="text" id="firstName" name="firstName" value="Иван" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Фамилия</label>
+                                        <input type="text" id="lastName" name="lastName" value="Иванов" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" value="ivan.ivanov@company.com" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Телефон</label>
+                                        <input type="tel" id="phone" name="phone" value="+7 (999) 123-45-67" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Компания</label>
+                                    <input type="text" id="company" name="company" value="ООО 'Технологии будущего'" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="position">Должность</label>
+                                    <input type="text" id="position" name="position" value="Менеджер по развитию" readonly>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-save" style="display: none;">Сохранить</button>
+                                    <button type="button" class="btn-cancel" style="display: none;" onclick="cancelEdit()">Отмена</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Change Password -->
+                    <div class="profile-section-content" id="change-password" style="display: none;">
+                        <div class="section-header">
+                            <h2 class="section-title">Смена пароля</h2>
+                        </div>
+
+                        <div class="profile-card">
+                            <form class="password-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Текущий пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="currentPassword" name="currentPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('currentPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="newPassword">Новый пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="newPassword" name="newPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('newPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                    <div class="password-requirements">
+                                        <p>Пароль должен содержать:</p>
+                                        <ul>
+                                            <li id="length-req">Минимум 8 символов</li>
+                                            <li id="uppercase-req">Заглавную букву</li>
+                                            <li id="lowercase-req">Строчную букву</li>
+                                            <li id="number-req">Цифру</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Подтвердите пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-save">Изменить пароль</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div class="profile-section-content" id="history" style="display: none;">
+                        <div class="section-header">
+                            <h2 class="section-title">История использования</h2>
+                            <button class="btn-export">Экспорт данных</button>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="history-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">24</div>
+                                    <div class="stat-label">Всего предложений</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8</div>
+                                    <div class="stat-label">Использовано</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">15</div>
+                                    <div class="stat-label">Активных предложений</div>
+                                </div>
+                            </div>
+
+                            <div class="history-list">
+                                <div class="history-item">
+                                    <div class="history-icon">🏥</div>
+                                    <div class="history-details">
+                                        <h4>Медицинский центр "Здоровье+"</h4>
+                                        <p>Использован промокод HEALTH20</p>
+                                        <span class="history-date">15 декабря 2024</span>
+                                    </div>
+                                    <div class="history-status">Использовано</div>
+                                </div>
+
+                                <div class="history-item">
+                                    <div class="history-icon">🏃</div>
+                                    <div class="history-details">
+                                        <h4>Фитнес-клуб "Актив"</h4>
+                                        <p>Использован промокод FITNESS30</p>
+                                        <span class="history-date">10 декабря 2024</span>
+                                    </div>
+                                    <div class="history-status">Использовано</div>
+                                </div>
+
+                                <div class="history-item">
+                                    <div class="history-icon">📚</div>
+                                    <div class="history-details">
+                                        <h4>Онлайн-курсы "Умные навыки"</h4>
+                                        <p>Использован промокод SKILLS25</p>
+                                        <span class="history-date">5 декабря 2024</span>
+                                    </div>
+                                    <div class="history-status">Использовано</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="profile-section-content" id="notifications" style="display: none;">
+                        <div class="section-header">
+                            <h2 class="section-title">Настройки уведомлений</h2>
+                        </div>
+
+                        <div class="profile-card">
+                            <form class="notifications-form" id="notificationsForm">
+                                <div class="notification-group">
+                                    <h3>Email уведомления</h3>
+                                    <div class="notification-item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <div class="notification-info">
+                                            <h4>Новые предложения</h4>
+                                            <p>Уведомления о новых предложениях в ваших категориях</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notification-item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <div class="notification-info">
+                                            <h4>Истекающие предложения</h4>
+                                            <p>Напоминания о предложениях, срок действия которых скоро истекает</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="notification-item">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <div class="notification-info">
+                                            <h4>Еженедельная сводка</h4>
+                                            <p>Еженедельный обзор новых предложений и статистики</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="notification-group">
+                                    <h3>Push уведомления</h3>
+                                    <div class="notification-item">
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <div class="notification-info">
+                                            <h4>Браузерные уведомления</h4>
+                                            <p>Уведомления в браузере о важных событиях</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-save">Сохранить настройки</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+</body>
+</html>
+

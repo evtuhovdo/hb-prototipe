@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Bridge - Навигация по страницам</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .page-list {
+            list-style: none;
+        }
+
+        .page-item {
+            margin-bottom: 15px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .page-link:hover {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+        }
+
+        .page-description {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .status.completed {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status.pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+
+        .tech-stack {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tech-stack h4 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #3b82f6;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="pages/main.html" class="logo">Health Bridge</a>
+            <p class="subtitle">Навигация по страницам проекта</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏠 Публичные страницы</h2>
+            <ul class="page-list">
+                <li class="page-item">
+                    <a href="pages/main.html" class="page-link">
+                        Главная страница
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Лендинг с информацией о сервисе, категориях и партнёрах</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/login.html" class="page-link">
+                        Страница авторизации
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Форма входа с восстановлением пароля</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/dashboard.html" class="page-link">
+                        Личный кабинет
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Дашборд для авторизованных пользователей с полными предложениями</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/all-offers.html" class="page-link">
+                        Все предложения
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Страница со всеми предложениями с поиском и фильтрами</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/offer-detail-public.html" class="page-link">
+                        Детали предложения (публичная)
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Страница предложения для неавторизованных пользователей</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">👤 Личный кабинет пользователя</h2>
+            <ul class="page-list">
+                <li class="page-item">
+                    <a href="pages/dashboard.html" class="page-link">
+                        Дашборд пользователя
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Главная страница авторизованного пользователя с офферами</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/category.html" class="page-link">
+                        Страница категории
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Список офферов в выбранной категории</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/offer-detail.html" class="page-link">
+                        Детальная страница оффера
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Подробная информация об оффере с промокодом</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/favorites.html" class="page-link">
+                        Избранные офферы
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Сохранённые пользователем офферы</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="pages/profile.html" class="page-link">
+                        Профиль пользователя
+                        <span class="status completed">Готово</span>
+                        <div class="page-description">Просмотр личных данных и смена пароля (только чтение)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚙️ Административные страницы</h2>
+            <ul class="page-list">
+                <li class="page-item">
+                    <a href="#" class="page-link">
+                        Админ-панель
+                        <span class="status pending">В разработке</span>
+                        <div class="page-description">Управление офферами, пользователями и настройками</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">
+                        Управление офферами
+                        <span class="status pending">В разработке</span>
+                        <div class="page-description">CRUD операции для офферов</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">
+                        Управление пользователями
+                        <span class="status pending">В разработке</span>
+                        <div class="page-description">Регистрация компаний и пользователей</div>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">
+                        SEO настройки
+                        <span class="status pending">В разработке</span>
+                        <div class="page-description">Управление мета-тегами и SEO параметрами</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tech-stack">
+            <h4>🛠️ Технологический стек</h4>
+            <div class="tech-list">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">Responsive Design</span>
+                <span class="tech-tag">Glassmorphism</span>
+                <span class="tech-tag">Intersection Observer</span>
+                <span class="tech-tag">CSS Variables</span>
+                <span class="tech-tag">Flexbox/Grid</span>
+                <span class="tech-tag">WebView Ready</span>
+                <span class="tech-tag">Mobile Optimized</span>
+            </div>
+        </div>
+
+        <div class="tech-stack" style="margin-top: 20px;">
+            <h4>📱 Мобильное приложение</h4>
+            <div class="tech-list">
+                <span class="tech-tag">WebView Integration</span>
+                <span class="tech-tag">Touch Events</span>
+                <span class="tech-tag">Deep Linking</span>
+                <span class="tech-tag">Push Notifications</span>
+                <span class="tech-tag">Native Bridge</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Проект корпоративных льгот с бело-голубой цветовой схемой
+            </p>
+        </div>
+    </div>
+</body>
+</html>

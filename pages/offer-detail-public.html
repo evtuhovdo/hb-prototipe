@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплексное обследование - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html#categories">Категории</a>
+            <a href="main.html#partners">Партнёры</a>
+            <a href="main.html#about">О сервисе</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register" onclick="window.location.href='main.html'">На главную</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="main.html">Главная</a>
+            <span class="separator">/</span>
+            <a href="all-offers.html">Все предложения</a>
+            <span class="separator">/</span>
+            <span class="current">Комплексное обследование</span>
+        </div>
+    </div>
+
+    <!-- Offer Detail Section -->
+    <section class="offer-detail-section">
+        <div class="container">
+            <div class="offer-detail-content">
+                <!-- Offer Header -->
+                <div class="offer-header">
+                    <div class="offer-banner-large">
+                        <img src="https://via.placeholder.com/800x450/3b82f6/ffffff?text=Медицинский+центр+Здоровье+" alt="Медицинский центр Здоровье+">
+                    </div>
+                    <div class="offer-info">
+                        <div class="offer-partner">Медицинский центр "Здоровье+"</div>
+                        <h1 class="offer-title">Комплексное обследование</h1>
+                        <div class="offer-meta">
+                            <span class="offer-category">🏥 Здоровье</span>
+                            <span class="offer-region">📍 Москва и МО</span>
+                            <span class="offer-validity">⏰ До 31.12.2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Public Information -->
+                <div class="offer-content">
+                    <div class="content-grid">
+                        <div class="main-content">
+                            <div class="content-section">
+                                <h2>О предложении</h2>
+                                <p>Полное медицинское обследование для сотрудников компаний включает в себя комплексную диагностику состояния здоровья с использованием современного оборудования и опытных специалистов.</p>
+                                
+                                <h3>Что входит в обследование:</h3>
+                                <ul class="offer-features">
+                                    <li>Консультация терапевта</li>
+                                    <li>Общий анализ крови и мочи</li>
+                                    <li>ЭКГ с расшифровкой</li>
+                                    <li>УЗИ органов брюшной полости</li>
+                                    <li>Флюорография</li>
+                                    <li>Консультация узких специалистов по показаниям</li>
+                                </ul>
+
+                                <h3>Преимущества:</h3>
+                                <ul class="offer-benefits">
+                                    <li>Современное оборудование</li>
+                                    <li>Опытные врачи</li>
+                                    <li>Быстрое получение результатов</li>
+                                    <li>Удобное расположение в центре Москвы</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-section">
+                                <h2>О партнёре</h2>
+                                <p>Медицинский центр "Здоровье+" — это современная клиника с многолетним опытом работы в области корпоративной медицины. Мы предоставляем качественные медицинские услуги для сотрудников различных компаний.</p>
+                                
+                                <div class="partner-info">
+                                    <div class="partner-details">
+                                        <h4>Контактная информация:</h4>
+                                        <p><strong>Адрес:</strong> г. Москва, ул. Тверская, д. 15</p>
+                                        <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                                        <p><strong>Email:</strong> info@zdorovie-plus.ru</p>
+                                        <p><strong>Сайт:</strong> <a href="https://zdorovie-plus.ru" target="_blank">zdorovie-plus.ru</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar">
+                            <!-- Login Prompt -->
+                            <div class="login-prompt">
+                                <div class="prompt-icon">🔒</div>
+                                <h3>Получите полную информацию</h3>
+                                <p>Войдите в систему, чтобы увидеть:</p>
+                                <ul class="prompt-features">
+                                    <li>Промокод для скидки</li>
+                                    <li>Детальные условия</li>
+                                    <li>Персональные предложения</li>
+                                    <li>Историю использования</li>
+                                </ul>
+                                <button class="btn-login-full">Войти в систему</button>
+                                <p class="prompt-note">Нет аккаунта? <a href="#" class="register-link">Подайте заявку на регистрацию</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Готовы получить доступ к предложениям?</h2>
+            <p class="cta-subtitle">Зарегистрируйте вашу компанию и получите доступ к эксклюзивным льготам</p>
+            <div class="cta-buttons">
+                <button class="btn-contact">Подать заявку</button>
+                <button class="btn-login-secondary">Войти в систему</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Registration Request Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Заявка на регистрацию</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="registration-form" id="registrationForm">
+                <div class="form-group">
+                    <label for="companyName">Название компании *</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactName">ФИО контактного лица *</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Телефон *</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Регион *</label>
+                    <select id="region" name="region" required>
+                        <option value="">Выберите регион</option>
+                        <option value="moscow">Москва и МО</option>
+                        <option value="spb">Санкт-Петербург и ЛО</option>
+                        <option value="central">Центральный федеральный округ</option>
+                        <option value="northwest">Северо-Западный федеральный округ</option>
+                        <option value="south">Южный федеральный округ</option>
+                        <option value="volga">Приволжский федеральный округ</option>
+                        <option value="ural">Уральский федеральный округ</option>
+                        <option value="siberia">Сибирский федеральный округ</option>
+                        <option value="far-east">Дальневосточный федеральный округ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="employeesCount">Количество сотрудников *</label>
+                    <input type="number" id="employeesCount" name="employeesCount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="additionalInfo">Дополнительная информация</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" maxlength="1000" placeholder="Расскажите о вашей компании и потребностях..."></textarea>
+                    <div class="char-count"><span id="charCount">0</span>/1000</div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Отмена</button>
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+</body>
+</html>
+

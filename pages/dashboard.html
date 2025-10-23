@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <a href="dashboard.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="dashboard.html" class="active">Главная</a>
+            <a href="category.html">Категории</a>
+            <a href="favorites.html">Избранное</a>
+        </nav>
+        <div class="header-right">
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <span>ИИ</span>
+                </div>
+                <div class="user-dropdown">
+                    <a href="profile.html">Профиль</a>
+                    <a href="login.html">Выйти</a>
+                </div>
+            </div>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="dashboard.html">Главная</a>
+                <span>→</span>
+                <span>Личный кабинет</span>
+            </nav>
+
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Добро пожаловать, Иван!</h1>
+                    <p class="welcome-subtitle">Ваши персональные предложения и льготы</p>
+                    <div class="user-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-info">
+                                <div class="stat-number">24</div>
+                                <div class="stat-label">Активных предложений</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">❤️</div>
+                            <div class="stat-info">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">В избранном</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🏢</div>
+                            <div class="stat-info">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Использовано</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Поиск по названию, описанию или партнёру...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Категория:</label>
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="">Все категории</option>
+                            <option value="analyses">🧪 Анализы</option>
+                            <option value="cosmetology">💄 Косметология</option>
+                            <option value="fitness">💪 Фитнес</option>
+                            <option value="wellness">🧘 Wellness</option>
+                            <option value="spa">🛁 SPA</option>
+                            <option value="clinics">🏥 Клиники</option>
+                            <option value="dentistry">🦷 Стоматология</option>
+                            <option value="ophthalmology">👁️ Офтальмология</option>
+                            <option value="psychology">🧠 Психология</option>
+                            <option value="nutrition">🥗 Питание</option>
+                            <option value="rehabilitation">🏥 Реабилитация</option>
+                            <option value="alternative">🌿 Альтернативная медицина</option>
+                            <option value="pharmacy">💊 Аптеки</option>
+                            <option value="diagnostics">🔬 Диагностика</option>
+                            <option value="emergency">🚑 Скорая помощь</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Регион:</label>
+                        <select class="filter-select" id="regionFilter">
+                            <option value="">Все регионы</option>
+                            <option value="moscow">Москва и МО</option>
+                            <option value="spb">Санкт-Петербург и ЛО</option>
+                            <option value="central">Центральный ФО</option>
+                            <option value="northwest">Северо-Западный ФО</option>
+                            <option value="south">Южный ФО</option>
+                            <option value="volga">Приволжский ФО</option>
+                            <option value="ural">Уральский ФО</option>
+                            <option value="siberia">Сибирский ФО</option>
+                            <option value="far-east">Дальневосточный ФО</option>
+                            <option value="all-russia">Вся Россия</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Сортировка:</label>
+                        <select class="filter-select" id="sortFilter">
+                            <option value="newest">Сначала новые</option>
+                            <option value="popular">Популярные</option>
+                            <option value="discount">По размеру скидки</option>
+                            <option value="expiry">По сроку действия</option>
+                            <option value="alphabetical">По алфавиту</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offers Grid -->
+            <div class="offers-section">
+                <div class="offers-header">
+                    <h2 class="section-title">Ваши предложения</h2>
+                    <div class="results-info">
+                        <span class="results-count">Показано <strong>24</strong> из <strong>500+</strong> предложений</span>
+                    </div>
+                </div>
+
+                <div class="offers-grid">
+                    <!-- Analyses Category Offers -->
+                    <div class="offer-card" data-category="analyses" data-region="moscow" onclick="window.location.href='offer-detail.html?id=1'">
+                        <div class="offer-image">🧪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Лаборатория "Анализ+"</h3>
+                            <p class="offer-description">Скидка 25% на все виды анализов крови и биохимические исследования</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧪 Анализы</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(1)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(1)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="analyses" data-region="spb" onclick="window.location.href='offer-detail.html?id=2'">
+                        <div class="offer-image">🔬</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Медицинский центр "Диагностика+"</h3>
+                            <p class="offer-description">Скидка 20% на гормональные исследования и эндокринологические анализы</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧪 Анализы</span>
+                                <span class="offer-region">Санкт-Петербург и ЛО</span>
+                                <span class="offer-expiry">До 15.01.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(2)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(2)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cosmetology Category Offers -->
+                    <div class="offer-card" data-category="cosmetology" data-region="spb" onclick="window.location.href='offer-detail.html?id=3'">
+                        <div class="offer-image">💄</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Косметологический центр "Красота+"</h3>
+                            <p class="offer-description">Скидка 30% на эстетические процедуры и уход за кожей</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💄 Косметология</span>
+                                <span class="offer-region">Санкт-Петербург</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(3)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(3)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="cosmetology" data-region="moscow" onclick="window.location.href='offer-detail.html?id=4'">
+                        <div class="offer-image">✨</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Студия красоты "Элегант"</h3>
+                            <p class="offer-description">Скидка 15% на процедуры омоложения и ухода за лицом</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💄 Косметология</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 28.02.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(4)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(4)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fitness Category Offers -->
+                    <div class="offer-card" data-category="fitness" data-region="all-russia" onclick="window.location.href='offer-detail.html?id=5'">
+                        <div class="offer-image">💪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Fitness Club Pro</h3>
+                            <p class="offer-description">Специальные программы для корпоративных клиентов</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💪 Фитнес</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 31.03.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(5)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(5)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="fitness" data-region="moscow" onclick="window.location.href='offer-detail.html?id=6'">
+                        <div class="offer-image">🏋️</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Спортивный комплекс "Сила+"</h3>
+                            <p class="offer-description">Скидка 20% на абонементы в тренажёрный зал и групповые занятия</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💪 Фитнес</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(6)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(6)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wellness Category Offers -->
+                    <div class="offer-card" data-category="wellness" data-region="moscow" onclick="window.location.href='offer-detail.html?id=7'">
+                        <div class="offer-image">🧘</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Wellness Центр "Гармония"</h3>
+                            <p class="offer-description">Комплексные программы для здоровья и благополучия</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧘 Wellness</span>
+                                <span class="offer-region">Москва</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(7)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(7)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="wellness" data-region="spb" onclick="window.location.href='offer-detail.html?id=8'">
+                        <div class="offer-image">🌿</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Центр "Здоровый образ жизни"</h3>
+                            <p class="offer-description">Скидка 25% на программы детокса и восстановления</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧘 Wellness</span>
+                                <span class="offer-region">Санкт-Петербург</span>
+                                <span class="offer-expiry">До 15.01.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(8)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(8)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SPA Category Offers -->
+                    <div class="offer-card" data-category="spa" data-region="all-russia" onclick="window.location.href='offer-detail.html?id=9'">
+                        <div class="offer-image">🛁</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">SPA Центр "Релакс"</h3>
+                            <p class="offer-description">Комплексные программы релаксации и восстановления</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🛁 SPA</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 28.02.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(9)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(9)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="spa" data-region="moscow" onclick="window.location.href='offer-detail.html?id=10'">
+                        <div class="offer-image">💆</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">SPA-салон "Нежность"</h3>
+                            <p class="offer-description">Скидка 18% на массажи и SPA-процедуры</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🛁 SPA</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.03.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(10)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(10)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clinics Category Offers -->
+                    <div class="offer-card" data-category="clinics" data-region="all-russia" onclick="window.location.href='offer-detail.html?id=11'">
+                        <div class="offer-image">🏥</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Медицинская клиника "Здоровье+"</h3>
+                            <p class="offer-description">Полная диагностика и консультации специалистов</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🏥 Клиники</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(11)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(11)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="clinics" data-region="moscow" onclick="window.location.href='offer-detail.html?id=12'">
+                        <div class="offer-image">🩺</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Многопрофильная клиника "Медика+"</h3>
+                            <p class="offer-description">Скидка 20% на комплексные обследования и лечение</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🏥 Клиники</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="event.stopPropagation(); getOfferDiscount(12)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="event.stopPropagation(); toggleOfferFavorite(12)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn-load-more">Показать ещё</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+    <script>
+        // Фильтрация предложений
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const regionFilter = document.getElementById('regionFilter');
+            const sortFilter = document.getElementById('sortFilter');
+            const searchInput = document.querySelector('.search-input');
+            const offerCards = document.querySelectorAll('.offer-card');
+            const resultsCount = document.querySelector('.results-count');
+
+            function filterOffers() {
+                const categoryValue = categoryFilter.value;
+                const regionValue = regionFilter.value;
+                const searchValue = searchInput.value.toLowerCase();
+                let visibleCount = 0;
+
+                offerCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    const cardRegion = card.dataset.region;
+                    const cardTitle = card.querySelector('.offer-title').textContent.toLowerCase();
+                    const cardDescription = card.querySelector('.offer-description').textContent.toLowerCase();
+                    const cardPartner = card.querySelector('.offer-title').textContent.toLowerCase();
+
+                    const categoryMatch = !categoryValue || cardCategory === categoryValue;
+                    const regionMatch = !regionValue || cardRegion === regionValue;
+                    const searchMatch = !searchValue || 
+                        cardTitle.includes(searchValue) || 
+                        cardDescription.includes(searchValue) || 
+                        cardPartner.includes(searchValue);
+
+                    if (categoryMatch && regionMatch && searchMatch) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                resultsCount.innerHTML = `Показано <strong>${visibleCount}</strong> из <strong>200+</strong> предложений`;
+            }
+
+            categoryFilter.addEventListener('change', filterOffers);
+            regionFilter.addEventListener('change', filterOffers);
+            sortFilter.addEventListener('change', filterOffers);
+            searchInput.addEventListener('input', filterOffers);
+        });
+
+        // Функции для работы с предложениями
+        function getOfferDiscount(offerId) {
+            // Здесь будет логика получения промокода
+            showToast('Промокод скопирован в буфер обмена!', 'success');
+        }
+
+        function toggleOfferFavorite(offerId) {
+            // Здесь будет логика добавления в избранное
+            showToast('Добавлено в избранное!', 'success');
+        }
+
+        function showToast(message, type) {
+            // Простая реализация уведомлений
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#10B981' : '#EF4444'};
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                z-index: 1000;
+                font-weight: 500;
+            `;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

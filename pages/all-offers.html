@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все предложения - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a href="all-offers.html" class="active">Все предложения</a>
+            <a href="category.html">Категории</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register" onclick="window.location.href='main.html'">На главную</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- All Offers Section -->
+    <section class="all-offers-section">
+        <div class="all-offers-container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="main.html">Главная</a>
+                <span>→</span>
+                <span>Все предложения</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-info">
+                    <h1 class="page-title">Все предложения</h1>
+                    <p class="page-description">Просматривайте все доступные предложения от наших партнёров</p>
+                    <div class="page-stats">
+                        <span class="stat-item">
+                            <strong>500+</strong> предложений
+                        </span>
+                        <span class="stat-item">
+                            <strong>80+</strong> партнёров
+                        </span>
+                        <span class="stat-item">
+                            <strong>15</strong> категорий
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Поиск по названию, описанию или партнёру...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Категория:</label>
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="">Все категории</option>
+                            <option value="analyses">🧪 Анализы</option>
+                            <option value="cosmetology">💄 Косметология</option>
+                            <option value="fitness">💪 Фитнес</option>
+                            <option value="wellness">🧘 Wellness</option>
+                            <option value="spa">🛁 SPA</option>
+                            <option value="clinics">🏥 Клиники</option>
+                            <option value="dentistry">🦷 Стоматология</option>
+                            <option value="ophthalmology">👁️ Офтальмология</option>
+                            <option value="psychology">🧠 Психология</option>
+                            <option value="nutrition">🥗 Питание</option>
+                            <option value="rehabilitation">🏥 Реабилитация</option>
+                            <option value="alternative">🌿 Альтернативная медицина</option>
+                            <option value="pharmacy">💊 Аптеки</option>
+                            <option value="diagnostics">🔬 Диагностика</option>
+                            <option value="emergency">🚑 Скорая помощь</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Регион:</label>
+                        <select class="filter-select" id="regionFilter">
+                            <option value="">Все регионы</option>
+                            <option value="moscow">Москва и МО</option>
+                            <option value="spb">Санкт-Петербург и ЛО</option>
+                            <option value="central">Центральный ФО</option>
+                            <option value="northwest">Северо-Западный ФО</option>
+                            <option value="south">Южный ФО</option>
+                            <option value="volga">Приволжский ФО</option>
+                            <option value="ural">Уральский ФО</option>
+                            <option value="siberia">Сибирский ФО</option>
+                            <option value="far-east">Дальневосточный ФО</option>
+                            <option value="all-russia">Вся Россия</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Сортировка:</label>
+                        <select class="filter-select" id="sortFilter">
+                            <option value="newest">Сначала новые</option>
+                            <option value="popular">Популярные</option>
+                            <option value="discount">По размеру скидки</option>
+                            <option value="expiry">По сроку действия</option>
+                            <option value="alphabetical">По алфавиту</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offers Grid -->
+            <div class="offers-section">
+                <div class="offers-header">
+                    <h2 class="section-title">Доступные предложения</h2>
+                    <div class="results-info">
+                        <span class="results-count">Показано <strong>24</strong> из <strong>500+</strong> предложений</span>
+                    </div>
+                </div>
+
+                <div class="offers-grid">
+                    <!-- Analyses Category Offers -->
+                    <div class="offer-card" data-category="analyses" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=1'">
+                        <div class="offer-image">🧪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Лаборатория "Анализ+"</h3>
+                            <p class="offer-description">Скидка 25% на все виды анализов крови и биохимические исследования</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧪 Анализы</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="analyses" data-region="spb" onclick="window.location.href='offer-detail-public.html?id=2'">
+                        <div class="offer-image">🔬</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Медицинский центр "Диагностика+"</h3>
+                            <p class="offer-description">Скидка 20% на гормональные исследования и эндокринологические анализы</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧪 Анализы</span>
+                                <span class="offer-region">Санкт-Петербург и ЛО</span>
+                                <span class="offer-expiry">До 15.01.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cosmetology Category Offers -->
+                    <div class="offer-card" data-category="cosmetology" data-region="spb" onclick="window.location.href='offer-detail-public.html?id=3'">
+                        <div class="offer-image">💄</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Косметологический центр "Красота+"</h3>
+                            <p class="offer-description">Скидка 30% на эстетические процедуры и уход за кожей</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💄 Косметология</span>
+                                <span class="offer-region">Санкт-Петербург</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="cosmetology" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=4'">
+                        <div class="offer-image">✨</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Студия красоты "Элегант"</h3>
+                            <p class="offer-description">Скидка 15% на процедуры омоложения и ухода за лицом</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💄 Косметология</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 28.02.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fitness Category Offers -->
+                    <div class="offer-card" data-category="fitness" data-region="all-russia" onclick="window.location.href='offer-detail-public.html?id=5'">
+                        <div class="offer-image">💪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Fitness Club Pro</h3>
+                            <p class="offer-description">Специальные программы для корпоративных клиентов</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💪 Фитнес</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 31.03.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="fitness" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=6'">
+                        <div class="offer-image">🏋️</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Спортивный комплекс "Сила+"</h3>
+                            <p class="offer-description">Скидка 20% на абонементы в тренажёрный зал и групповые занятия</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">💪 Фитнес</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wellness Category Offers -->
+                    <div class="offer-card" data-category="wellness" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=7'">
+                        <div class="offer-image">🧘</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Wellness Центр "Гармония"</h3>
+                            <p class="offer-description">Комплексные программы для здоровья и благополучия</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧘 Wellness</span>
+                                <span class="offer-region">Москва</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="wellness" data-region="spb" onclick="window.location.href='offer-detail-public.html?id=8'">
+                        <div class="offer-image">🌿</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Центр "Здоровый образ жизни"</h3>
+                            <p class="offer-description">Скидка 25% на программы детокса и восстановления</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🧘 Wellness</span>
+                                <span class="offer-region">Санкт-Петербург</span>
+                                <span class="offer-expiry">До 15.01.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SPA Category Offers -->
+                    <div class="offer-card" data-category="spa" data-region="all-russia" onclick="window.location.href='offer-detail-public.html?id=9'">
+                        <div class="offer-image">🛁</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">SPA Центр "Релакс"</h3>
+                            <p class="offer-description">Комплексные программы релаксации и восстановления</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🛁 SPA</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 28.02.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="spa" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=10'">
+                        <div class="offer-image">💆</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">SPA-салон "Нежность"</h3>
+                            <p class="offer-description">Скидка 18% на массажи и SPA-процедуры</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🛁 SPA</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.03.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clinics Category Offers -->
+                    <div class="offer-card" data-category="clinics" data-region="all-russia" onclick="window.location.href='offer-detail-public.html?id=11'">
+                        <div class="offer-image">🏥</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Медицинская клиника "Здоровье+"</h3>
+                            <p class="offer-description">Полная диагностика и консультации специалистов</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🏥 Клиники</span>
+                                <span class="offer-region">Вся Россия</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="clinics" data-region="moscow" onclick="window.location.href='offer-detail-public.html?id=12'">
+                        <div class="offer-image">🩺</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Многопрофильная клиника "Медика+"</h3>
+                            <p class="offer-description">Скидка 20% на комплексные обследования и лечение</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">🏥 Клиники</span>
+                                <span class="offer-region">Москва и МО</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn-load-more">Показать ещё</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+    <script>
+        // Фильтрация предложений
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const regionFilter = document.getElementById('regionFilter');
+            const sortFilter = document.getElementById('sortFilter');
+            const searchInput = document.querySelector('.search-input');
+            const offerCards = document.querySelectorAll('.offer-card');
+            const resultsCount = document.querySelector('.results-count');
+
+            // Проверяем URL параметры и устанавливаем фильтры
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            
+            if (categoryParam) {
+                // Устанавливаем фильтр по категории
+                categoryFilter.value = categoryParam;
+                
+                // Обновляем заголовок страницы
+                const categoryNames = {
+                    'analyses': 'Анализы',
+                    'cosmetology': 'Косметология',
+                    'fitness': 'Фитнес',
+                    'wellness': 'Wellness',
+                    'spa': 'SPA',
+                    'clinics': 'Клиники',
+                    'dentistry': 'Стоматология',
+                    'ophthalmology': 'Офтальмология',
+                    'psychology': 'Психология',
+                    'nutrition': 'Питание',
+                    'rehabilitation': 'Реабилитация',
+                    'alternative': 'Альтернативная медицина',
+                    'pharmacy': 'Аптеки',
+                    'diagnostics': 'Диагностика',
+                    'emergency': 'Скорая помощь'
+                };
+                
+                const categoryName = categoryNames[categoryParam] || categoryParam;
+                document.querySelector('.page-title').textContent = `Предложения: ${categoryName}`;
+                document.querySelector('.page-description').textContent = `Просматривайте предложения в категории "${categoryName}"`;
+                
+                // Обновляем breadcrumbs
+                const breadcrumbs = document.querySelector('.breadcrumbs');
+                breadcrumbs.innerHTML = `
+                    <a href="main.html">Главная</a>
+                    <span>→</span>
+                    <a href="all-offers.html">Все предложения</a>
+                    <span>→</span>
+                    <span>${categoryName}</span>
+                `;
+            }
+
+            function filterOffers() {
+                const categoryValue = categoryFilter.value;
+                const regionValue = regionFilter.value;
+                const searchValue = searchInput.value.toLowerCase();
+                let visibleCount = 0;
+
+                offerCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    const cardRegion = card.dataset.region;
+                    const cardTitle = card.querySelector('.offer-title').textContent.toLowerCase();
+                    const cardDescription = card.querySelector('.offer-description').textContent.toLowerCase();
+                    const cardPartner = card.querySelector('.offer-title').textContent.toLowerCase();
+
+                    const categoryMatch = !categoryValue || cardCategory === categoryValue;
+                    const regionMatch = !regionValue || cardRegion === regionValue;
+                    const searchMatch = !searchValue || 
+                        cardTitle.includes(searchValue) || 
+                        cardDescription.includes(searchValue) || 
+                        cardPartner.includes(searchValue);
+
+                    if (categoryMatch && regionMatch && searchMatch) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                resultsCount.innerHTML = `Показано <strong>${visibleCount}</strong> из <strong>500+</strong> предложений`;
+            }
+
+            categoryFilter.addEventListener('change', filterOffers);
+            regionFilter.addEventListener('change', filterOffers);
+            sortFilter.addEventListener('change', filterOffers);
+            searchInput.addEventListener('input', filterOffers);
+
+            // Применяем фильтры при загрузке страницы (если есть URL параметры)
+            if (categoryParam) {
+                filterOffers();
+            }
+        });
+    </script>
+</body>
+</html>

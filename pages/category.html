@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категория "Здоровье" - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+    
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a href="all-offers.html">Все предложения</a>
+            <a href="category.html" class="active">Категории</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register" onclick="window.location.href='main.html'">На главную</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Category Section -->
+    <section class="category-section">
+        <div class="category-container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="main.html">Главная</a>
+                <span>→</span>
+                <a href="all-offers.html">Все предложения</a>
+                <span>→</span>
+                <span>Анализы</span>
+            </nav>
+
+            <!-- Category Header -->
+            <div class="category-header">
+                <div class="category-info">
+                    <div class="category-icon-large">🧪</div>
+                    <div class="category-details">
+                        <h1 class="category-title">Анализы</h1>
+                        <p class="category-description">Лабораторные исследования, диагностические тесты, медицинские анализы</p>
+                        <div class="category-stats">
+                            <span class="stat-item">
+                                <strong>45</strong> предложений
+                            </span>
+                            <span class="stat-item">
+                                <strong>12</strong> партнёров
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Поиск по предложениям...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="blood">Анализы крови</button>
+                    <button class="filter-btn" data-filter="urine">Анализы мочи</button>
+                    <button class="filter-btn" data-filter="hormones">Гормоны</button>
+                    <button class="filter-btn" data-filter="allergy">Аллергопробы</button>
+                    <button class="filter-btn" data-filter="genetic">Генетические</button>
+                </div>
+            </div>
+
+            <!-- Offers Grid -->
+            <div class="offers-section">
+                <div class="offers-header">
+                    <h2 class="section-title">Предложения в категории "Анализы"</h2>
+                    <div class="sort-options">
+                        <select class="sort-select">
+                            <option value="newest">Сначала новые</option>
+                            <option value="popular">Популярные</option>
+                            <option value="discount">По размеру скидки</option>
+                            <option value="expiry">По сроку действия</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="offers-grid">
+                    <div class="offer-card" data-category="blood" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">🧪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Лаборатория "Анализ+"</h3>
+                            <p class="offer-description">Скидка 25% на все виды анализов крови и биохимические исследования</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Анализы крови</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(1)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(1)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="hormones" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">⚗️</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Медицинский центр "Диагностика+"</h3>
+                            <p class="offer-description">Скидка 20% на гормональные исследования и эндокринологические анализы</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Гормоны</span>
+                                <span class="offer-expiry">До 15.01.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(2)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(2)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="allergy" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">🔬</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Аллергологический центр</h3>
+                            <p class="offer-description">Скидка 30% на аллергопробы и иммунологические исследования</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Аллергопробы</span>
+                                <span class="offer-expiry">До 28.02.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(3)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(3)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="urine" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">🧪</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Лаборатория "МедТест"</h3>
+                            <p class="offer-description">Скидка 15% на анализы мочи и почечные пробы</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Анализы мочи</span>
+                                <span class="offer-expiry">До 31.03.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(4)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(4)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="genetic" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">🧬</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Генетический центр "ДНК+"</h3>
+                            <p class="offer-description">Скидка 20% на генетические исследования и ДНК-тесты</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Генетические</span>
+                                <span class="offer-expiry">До 30.06.2025</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(5)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(5)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-card" data-category="blood" onclick="window.location.href='/pages/offer-detail.html'">
+                        <div class="offer-image">🩸</div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Центр лабораторной диагностики</h3>
+                            <p class="offer-description">Скидка 18% на комплексные анализы крови и общие исследования</p>
+                            <div class="offer-meta">
+                                <span class="offer-category">Анализы крови</span>
+                                <span class="offer-expiry">До 31.12.2024</span>
+                            </div>
+                            <div class="offer-actions">
+                                <button class="btn-primary" onclick="getOfferDiscount(6)">Получить скидку</button>
+                                <button class="btn-secondary" onclick="toggleOfferFavorite(6)">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn-load-more">Показать ещё</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+</body>
+</html>
+

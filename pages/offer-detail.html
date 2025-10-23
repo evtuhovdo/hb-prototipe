@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинский центр "Здоровье+" - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a href="all-offers.html">Все предложения</a>
+            <a href="category.html">Категории</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register" onclick="window.location.href='main.html'">На главную</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Offer Detail Section -->
+    <section class="offer-detail-section">
+        <div class="offer-detail-container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="main.html">Главная</a>
+                <span>→</span>
+                <a href="all-offers.html">Все предложения</a>
+                <span>→</span>
+                <a href="category.html">Здоровье</a>
+                <span>→</span>
+                <span>Медицинский центр "Здоровье+"</span>
+            </nav>
+
+            <div class="offer-detail-grid">
+                <!-- Main Content -->
+                <main class="offer-detail-main">
+                    <!-- Offer Header -->
+                    <div class="offer-header">
+                        <div class="offer-image-large">
+                            <div class="offer-image-placeholder">🏥</div>
+                            <div class="offer-badge">-20%</div>
+                        </div>
+                        <div class="offer-info">
+                            <div class="offer-category-badge">Здоровье</div>
+                            <h1 class="offer-title">Медицинский центр "Здоровье+"</h1>
+                            <p class="offer-subtitle">Скидка 20% на все медицинские услуги и консультации специалистов</p>
+                            
+                            <div class="offer-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-label">Партнёр:</span>
+                                    <span class="meta-value">Медицинский центр "Здоровье+"</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Действует до:</span>
+                                    <span class="meta-value">31 декабря 2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Промокод:</span>
+                                    <span class="meta-value promo-code">HEALTH20</span>
+                                    <button class="copy-btn" onclick="copyPromoCode()">📋</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Description -->
+                    <div class="offer-description">
+                        <h2>Описание предложения</h2>
+                        <p>Получите скидку 20% на все медицинские услуги в современном медицинском центре "Здоровье+". Наш центр оснащён самым современным оборудованием и укомплектован высококвалифицированными специалистами.</p>
+                        
+                        <h3>Что включено в предложение:</h3>
+                        <ul>
+                            <li>Консультации всех специалистов (терапевт, кардиолог, невролог, эндокринолог)</li>
+                            <li>Диагностические процедуры (УЗИ, ЭКГ, анализы)</li>
+                            <li>Физиотерапевтические процедуры</li>
+                            <li>Массаж и лечебная физкультура</li>
+                            <li>Стоматологические услуги</li>
+                        </ul>
+
+                        <h3>Условия использования:</h3>
+                        <ul>
+                            <li>Скидка действует только при предъявлении промокода</li>
+                            <li>Не суммируется с другими акциями</li>
+                            <li>Действует на все услуги центра</li>
+                            <li>Предварительная запись обязательна</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Контактная информация</h2>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Адрес</h4>
+                                    <p>ул. Медицинская, 15, Москва</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Телефон</h4>
+                                    <p>+7 (495) 123-45-67</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🌐</div>
+                                <div class="contact-details">
+                                    <h4>Сайт</h4>
+                                    <a href="https://healthplus.ru" target="_blank">healthplus.ru</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🕒</div>
+                                <div class="contact-details">
+                                    <h4>Часы работы</h4>
+                                    <p>Пн-Пт: 8:00-20:00<br>Сб-Вс: 9:00-18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="offer-detail-sidebar">
+                    <!-- Action Card -->
+                    <div class="action-card">
+                        <h3>Получить скидку</h3>
+                        <div class="promo-code-display">
+                            <span class="promo-code-text">HEALTH20</span>
+                            <button class="copy-promo-btn" onclick="copyPromoCode()">
+                                <span class="copy-icon">📋</span>
+                                <span class="copy-text">Скопировать</span>
+                            </button>
+                        </div>
+                        <button class="btn-get-offer" onclick="getOffer()">
+                            Перейти на сайт партнёра
+                        </button>
+                        <button class="btn-favorite" onclick="toggleFavorite()">
+                            <span class="favorite-icon">❤️</span>
+                            Добавить в избранное
+                        </button>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+</body>
+</html>

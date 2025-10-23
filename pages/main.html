@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Bridge - Корпоративные льготы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="all-offers.html">Все предложения</a>
+            <a href="#partners">Партнёры</a>
+            <a href="#about">О сервисе</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register" onclick="openRegistrationModal()">Заявка на регистрацию</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Корпоративные льготы для вашей команды</h1>
+                <p>Эксклюзивные предложения от ведущих партнёров</p>
+                <button class="btn-cta">Узнать больше</button>
+            </div>
+            <div class="hero-illustration">
+                <div class="illustration">
+                    🏥 Медицинская иллюстрация
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <h2 class="section-title">Наши категории</h2>
+        <div class="categories-grid">
+            <div class="category-card" data-category="analyses">
+                <div class="category-icon">🧪</div>
+                <h3 class="category-title">Анализы</h3>
+                <p class="category-count">45 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="cosmetology">
+                <div class="category-icon">💄</div>
+                <h3 class="category-title">Косметология</h3>
+                <p class="category-count">38 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="fitness">
+                <div class="category-icon">💪</div>
+                <h3 class="category-title">Фитнес</h3>
+                <p class="category-count">42 предложения</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="wellness">
+                <div class="category-icon">🧘</div>
+                <h3 class="category-title">Wellness</h3>
+                <p class="category-count">35 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="spa">
+                <div class="category-icon">🛁</div>
+                <h3 class="category-title">SPA</h3>
+                <p class="category-count">28 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="clinics">
+                <div class="category-icon">🏥</div>
+                <h3 class="category-title">Клиники</h3>
+                <p class="category-count">52 предложения</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="dentistry">
+                <div class="category-icon">🦷</div>
+                <h3 class="category-title">Стоматология</h3>
+                <p class="category-count">31 предложение</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="ophthalmology">
+                <div class="category-icon">👁️</div>
+                <h3 class="category-title">Офтальмология</h3>
+                <p class="category-count">24 предложения</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="psychology">
+                <div class="category-icon">🧠</div>
+                <h3 class="category-title">Психология</h3>
+                <p class="category-count">19 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="nutrition">
+                <div class="category-icon">🥗</div>
+                <h3 class="category-title">Питание</h3>
+                <p class="category-count">33 предложения</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="rehabilitation">
+                <div class="category-icon">🏥</div>
+                <h3 class="category-title">Реабилитация</h3>
+                <p class="category-count">26 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="alternative">
+                <div class="category-icon">🌿</div>
+                <h3 class="category-title">Альтернативная медицина</h3>
+                <p class="category-count">21 предложение</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="pharmacy">
+                <div class="category-icon">💊</div>
+                <h3 class="category-title">Аптеки</h3>
+                <p class="category-count">47 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="diagnostics">
+                <div class="category-icon">🔬</div>
+                <h3 class="category-title">Диагностика</h3>
+                <p class="category-count">39 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+            <div class="category-card" data-category="emergency">
+                <div class="category-icon">🚑</div>
+                <h3 class="category-title">Скорая помощь</h3>
+                <p class="category-count">15 предложений</p>
+                <p class="category-cta">Посмотреть предложения</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="partners-content">
+            <h2 class="section-title">Наши партнёры</h2>
+            <div class="partners-carousel">
+                <div class="partner-logo"><span>Партнёр 1</span></div>
+                <div class="partner-logo"><span>Партнёр 2</span></div>
+                <div class="partner-logo"><span>Партнёр 3</span></div>
+                <div class="partner-logo"><span>Партнёр 4</span></div>
+                <div class="partner-logo"><span>Партнёр 5</span></div>
+                <div class="partner-logo"><span>Партнёр 6</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Offers Section -->
+    <section class="featured-offers">
+        <div class="offers-content">
+            <h2 class="section-title">Популярные предложения</h2>
+            <p class="section-subtitle">Эксклюзивные льготы от наших партнёров</p>
+            <div class="offers-grid">
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=1'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/3b82f6/ffffff?text=Лаборатория+анализов" alt="Лаборатория Анализ+">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">Лаборатория "Анализ+"</div>
+                        <h3 class="offer-title">Комплексные анализы</h3>
+                        <p class="offer-description">Полный спектр лабораторных исследований со скидкой 25%</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">🧪 Анализы</span>
+                            <span class="offer-region">Москва и МО</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=2'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/10b981/ffffff?text=SPA+Center" alt="SPA Центр">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">SPA Центр "Релакс"</div>
+                        <h3 class="offer-title">SPA-программы</h3>
+                        <p class="offer-description">Комплексные программы релаксации и восстановления</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">🛁 SPA</span>
+                            <span class="offer-region">Санкт-Петербург</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=3'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/f59e0b/ffffff?text=Fitness+Club" alt="Fitness Club Pro">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">Fitness Club Pro</div>
+                        <h3 class="offer-title">Корпоративный фитнес</h3>
+                        <p class="offer-description">Специальные программы для сотрудников компаний</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">💪 Фитнес</span>
+                            <span class="offer-region">Вся Россия</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=4'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/ef4444/ffffff?text=Косметология" alt="Косметологический центр">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">Косметологический центр "Красота+"</div>
+                        <h3 class="offer-title">Эстетические процедуры</h3>
+                        <p class="offer-description">Современные методы омоложения и ухода за кожей</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">💄 Косметология</span>
+                            <span class="offer-region">Москва</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=5'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/8b5cf6/ffffff?text=Wellness+Center" alt="Wellness Центр">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">Wellness Центр "Гармония"</div>
+                        <h3 class="offer-title">Программы wellness</h3>
+                        <p class="offer-description">Комплексные программы для здоровья и благополучия</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">🧘 Wellness</span>
+                            <span class="offer-region">Вся Россия</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card" onclick="window.location.href='offer-detail-public.html?id=6'">
+                    <div class="offer-banner">
+                        <img src="https://via.placeholder.com/400x225/06b6d4/ffffff?text=Медицинская+клиника" alt="Медицинская клиника">
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-partner">Медицинская клиника "Здоровье+"</div>
+                        <h3 class="offer-title">Комплексное обследование</h3>
+                        <p class="offer-description">Полная диагностика и консультации специалистов</p>
+                        <div class="offer-meta">
+                            <span class="offer-category">🏥 Клиники</span>
+                            <span class="offer-region">Вся Россия</span>
+                        </div>
+                        <div class="offer-cta">
+                            <span class="cta-text">Войдите, чтобы увидеть условия</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offers-footer">
+                <p class="offers-note">Войдите в систему, чтобы увидеть все доступные предложения и получить персональные условия</p>
+                <div class="offers-actions">
+                    <button class="btn-all-offers" onclick="window.location.href='all-offers.html'">Все предложения</button>
+                    <button class="btn-login-large">Войти в систему</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-it-works" id="about">
+        <h2 class="section-title">Как это работает</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Регистрируйтесь</h3>
+                <p class="step-description">Ваша компания подключается к платформе и создаёт аккаунты для сотрудников</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Выбирайте предложения</h3>
+                <p class="step-description">Просматривайте эксклюзивные предложения от наших партнёров</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Получайте льготы</h3>
+                <p class="step-description">Используйте промокоды и получайте скидки на товары и услуги</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Готовы начать?</h2>
+            <p class="cta-subtitle">Свяжитесь с нами для подключения вашей компании</p>
+            <button class="btn-contact">Связаться</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Registration Request Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Заявка на регистрацию</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="registration-form" id="registrationForm">
+                <div class="form-group">
+                    <label for="companyName">Название компании *</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactName">ФИО контактного лица *</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Телефон *</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Регион *</label>
+                    <select id="region" name="region" required>
+                        <option value="">Выберите регион</option>
+                        <option value="moscow">Москва и МО</option>
+                        <option value="spb">Санкт-Петербург и ЛО</option>
+                        <option value="central">Центральный федеральный округ</option>
+                        <option value="northwest">Северо-Западный федеральный округ</option>
+                        <option value="south">Южный федеральный округ</option>
+                        <option value="volga">Приволжский федеральный округ</option>
+                        <option value="ural">Уральский федеральный округ</option>
+                        <option value="siberia">Сибирский федеральный округ</option>
+                        <option value="far-east">Дальневосточный федеральный округ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="employeesCount">Количество сотрудников *</label>
+                    <input type="number" id="employeesCount" name="employeesCount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="additionalInfo">Дополнительная информация</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" maxlength="1000" placeholder="Расскажите о вашей компании и потребностях..."></textarea>
+                    <div class="char-count"><span id="charCount">0</span>/1000</div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Отмена</button>
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

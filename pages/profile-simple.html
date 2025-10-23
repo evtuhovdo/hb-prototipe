@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя - Health Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages-styles.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <a href="main.html" class="logo">Health Bridge</a>
+        <nav class="nav">
+            <a href="main.html">Главная</a>
+            <a href="all-offers.html">Все предложения</a>
+            <a href="login.html">Войти</a>
+        </nav>
+        <div class="header-right">
+            <button class="btn-login">Войти</button>
+            <button class="btn-register">Заявка на регистрацию</button>
+            <select class="language-selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-grid">
+                <!-- Sidebar -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <a href="#personal-info" class="active">
+                            <span>👤</span>
+                            Личная информация
+                        </a>
+                        <a href="#change-password">
+                            <span>🔒</span>
+                            Смена пароля
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="profile-content">
+                    <!-- Personal Information -->
+                    <div class="profile-section-content" id="personal-info">
+                        <div class="section-header">
+                            <h2 class="section-title">Личная информация</h2>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-avatar-section">
+                                <div class="profile-avatar">
+                                    <span>ИИ</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-info">
+                                <div class="info-row">
+                                    <div class="info-group">
+                                        <label>ФИО</label>
+                                        <div class="info-value">Иван Иванов</div>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-group">
+                                        <label>Email</label>
+                                        <div class="info-value">ivan.ivanov@company.com</div>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-group">
+                                        <label>Компания</label>
+                                        <div class="info-value">ООО "Технологии будущего"</div>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-group">
+                                        <label>Должность</label>
+                                        <div class="info-value">Менеджер по развитию</div>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-group">
+                                        <label>Регион</label>
+                                        <div class="info-value">Москва и МО</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Change Password -->
+                    <div class="profile-section-content" id="change-password" style="display: none;">
+                        <div class="section-header">
+                            <h2 class="section-title">Смена пароля</h2>
+                        </div>
+
+                        <div class="profile-card">
+                            <form class="password-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Текущий пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="currentPassword" name="currentPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('currentPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="newPassword">Новый пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="newPassword" name="newPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('newPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                    <div class="password-requirements">
+                                        <p>Пароль должен содержать:</p>
+                                        <ul>
+                                            <li id="length-req">Минимум 8 символов</li>
+                                            <li id="uppercase-req">Заглавную букву</li>
+                                            <li id="lowercase-req">Строчную букву</li>
+                                            <li id="number-req">Цифру</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Подтвердите новый пароль</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                        <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                            <span class="eye-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-cancel" onclick="cancelPasswordChange()">Отмена</button>
+                                    <button type="submit" class="btn-save">Изменить пароль</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <a href="#">О нас</a>
+                <a href="#">Команда</a>
+                <a href="#">Карьера</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="#">Поддержка</a>
+                <a href="#">Телефон</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="footer-section">
+                <h3>Правовая информация</h3>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Соглашение</a>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <a href="#">Telegram</a>
+                <a href="#">VKontakte</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Health Bridge. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../pages-script.js"></script>
+    <script>
+        // Простая навигация по табам
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.profile-nav a');
+            const sections = document.querySelectorAll('.profile-section-content');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Убираем активный класс у всех ссылок
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Добавляем активный класс к текущей ссылке
+                    this.classList.add('active');
+                    
+                    // Скрываем все секции
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Показываем нужную секцию
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        // Функция переключения видимости пароля
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.nextElementSibling;
+            const eyeIcon = button.querySelector('.eye-icon');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                eyeIcon.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                eyeIcon.textContent = '👁️';
+            }
+        }
+
+        // Функция отмены смены пароля
+        function cancelPasswordChange() {
+            document.getElementById('passwordForm').reset();
+            document.querySelector('.profile-nav a[href="#personal-info"]').click();
+        }
+
+        // Валидация пароля
+        document.getElementById('newPassword').addEventListener('input', function() {
+            const password = this.value;
+            const requirements = {
+                length: password.length >= 8,
+                uppercase: /[A-Z]/.test(password),
+                lowercase: /[a-z]/.test(password),
+                number: /\d/.test(password)
+            };
+
+            // Обновляем визуальные индикаторы
+            Object.keys(requirements).forEach(req => {
+                const element = document.getElementById(req + '-req');
+                if (element) {
+                    element.style.color = requirements[req] ? '#10B981' : '#EF4444';
+                }
+            });
+        });
+
+        // Обработка формы смены пароля
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (newPassword !== confirmPassword) {
+                alert('Пароли не совпадают');
+                return;
+            }
+            
+            // Здесь должна быть отправка на сервер
+            alert('Пароль успешно изменён');
+            this.reset();
+            document.querySelector('.profile-nav a[href="#personal-info"]').click();
+        });
+    </script>
+</body>
+</html>
